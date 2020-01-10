@@ -14,6 +14,10 @@
 Route::get('/','ProduitController@getAll');
 Route::get('/{ProdCategorie}','ProduitController@find');
 Route::get('/{ProdCategorie}/{trie}','ProduitController@OrderBy');
+Route::post('/Connexion',function(){return view('Connexion');});
+Route::post('/Inscription',function(){return view('Inscription');});
+Route::post('/Panier',function(){return view('Panier');});
+
 
 
 

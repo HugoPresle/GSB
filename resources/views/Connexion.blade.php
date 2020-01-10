@@ -1,12 +1,11 @@
-<head> 
+<header> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" > 
+</header>
 
-<nav class="navbar navbar-dark bg-dark">
-  <span class="navbar-text">
-    <b> GSB Shop </b>
-  </span>
-</nav>
+<?php
+ include 'Header.php';
+?>
 <br><br><br><br><br><br><br><br>
 
 <body class="text-center">
@@ -19,7 +18,9 @@
     <br>
     <button class="btn btn-lg btn-dark btn-block" type="submit">Se connecter</button>
     <br>
-    <button class="btn btn-lg btn-dark btn-block" type="submit">Créer mon compte</button>
+  </form>
+  <form style="width: 100%; max-width: 330px; padding: 15px; margin: auto;" action="" method='post'>
+    <button class="btn btn-lg btn-dark btn-block" formaction="Inscription">Créer mon compte</button>
   </form>
 <body>
 
