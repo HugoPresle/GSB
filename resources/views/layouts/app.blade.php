@@ -36,9 +36,6 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                            <li >
-                                <a class="nav-link" href="/Panier">{{ __('Panier') }}</a>
-                            </li>
                         @if (Auth::guest())
                             <li >
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -48,7 +45,7 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-                                <ul class='dropdown-menu' role='menu'>
+                                
                                     <li>
                                         <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -59,7 +56,6 @@
                                         @crf
                                         </form>
                                     </li>
-                                </ul>
                             </li>    
                         @endif
                     </ul>
