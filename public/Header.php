@@ -13,21 +13,10 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
         <form action="" method='post'>
         <button class="btn btn-outline-light mr-sm-2" formaction="Panier">Mon panier</button>
-            <?php
-                $co = true;
-                if ($co) 
-                { 
-            ?>
                     <button class="btn btn-outline-light mr-sm-2" formaction="Connexion">Se connecter</button>
-            <?php    
-                } 
-                else 
-                { 
-            ?> 
+            
                     <button class="btn btn-outline-light mr-sm-2">Se déconnecter</button> 
-            <?php 
-                } 
-            ?>
+            
         </form>
     </div>
 </nav>

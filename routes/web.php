@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/','ProduitController@getAll');
-Route::get('/{ProdCategorie}','ProduitController@find');
-Route::get('/{ProdCategorie}/{trie}','ProduitController@OrderBy');
-Route::post('/Connexion',function(){return view('Connexion');});
-Route::post('/Inscription',function(){return view('Inscription');});
-Route::post('/Panier',function(){return view('Panier');});
+ Route::get('/','ProduitController@getAll');
+ Route::post('/{ProdCategorie}','ProduitController@find');
+ Route::post('/{ProdCategorie}/{trie}','ProduitController@OrderBy');
+ Route::get('/Panier',function(){return view('Panier');});
 
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
