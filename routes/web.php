@@ -13,8 +13,8 @@
 
 Auth::routes();
  Route::get('/','ProduitController@getAll');
- //Route::get('/{ProdCategorie}','ProduitController@find');
- Route::get('/{ProdCategorie}/{trie}','ProduitController@OrderBy');
+ Route::get('/Article/{ProdCategorie}','ProduitController@find');
+ Route::get('/Article/{ProdCategorie}/{trie}','ProduitController@OrderBy');
  Route::post('/Panier',function(){return view('Panier');});
 
 

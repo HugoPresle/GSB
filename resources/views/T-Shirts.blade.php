@@ -4,17 +4,17 @@
 
 <br>
 
-<form action="" method='post'>
+<form action="" method='get'>
   <div class="container">
     <div class="row">
       <div class ="col-md-3">
-        <button formaction="../T-Shirts">T-Shirts</button>
+        <button formaction="../Article/T-Shirts">T-Shirts</button>
       </div>
       <div class ="col-md-3">
-        <button formaction="../Sweatshirts">Sweatshirts</button> 
+        <button formaction="../Article/Sweatshirts">Sweatshirts</button> 
       </div>
       <div class ="col-md-3">
-        <button formaction="../Accessoires">Accessoires</button>
+        <button formaction="../Article/Accessoires">Accessoires</button>
       </div>
       <div class="form-group col-md-3">
         <select id="inputState" class="form-control">

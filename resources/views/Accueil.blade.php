@@ -4,23 +4,23 @@
 
 <br>
 
-<form action="" method='post'>
+<form action="" method='get'>
   <div class="container">
     <div class="row">
       <div class ="col-md-3">
-        <button formaction="../T-Shirts">T-Shirts</button>
+        <button formaction="../Article/T-Shirts">T-Shirts</button>
       </div>
       <div class ="col-md-3">
-        <button formaction="../Sweatshirts">Sweatshirts</button> 
+        <button formaction="../Article/Sweatshirts">Sweatshirts</button> 
       </div>
       <div class ="col-md-3">
-        <button formaction="../All/asc">Sweatshirts</button> 
+        <button formaction="../Article/All/asc">Sweatshirts</button> 
       </div>
       <div class="form-group col-md-3">
-        <select id="inputState" class="form-control">
+        <select id="inputState" class="form-control" onChange="location = this.options[this.selectedIndex].value;">
           <option selected>Trier par</option>
-          <option><button formaction="../All/asc">Prix (- cher)</button></option>
-          <option>Prix (+ cher)</option>
+          <option value="/Article/All/asc">Prix (- cher)</option>
+          <option value="/Article/All/desc">Prix (+ cher)</option>
         </select>
       </div>
     <div>
