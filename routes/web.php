@@ -15,11 +15,11 @@ Auth::routes();
  Route::get('/','ProduitController@getAll');
  Route::get('/Article/{ProdCategorie}','ProduitController@find');
  Route::get('/Article/{ProdCategorie}/{trie}','ProduitController@OrderBy');
- Route::post('/Panier',function(){return view('Panier');});
+ Route::get('/Panier',function(){return view('Panier');});
 
 
 
 
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');

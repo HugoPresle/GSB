@@ -13,52 +13,52 @@ class ProduitController extends Controller
         return view('Accueil',compact('produits'));
     }
     
-    public function find($ProdCategorie)
+    public function find($categorie)
     {
-        if ($ProdCategorie=="Sweatshirts") 
+        if ($categorie=="Sweatshirts") 
         {
-            $produits=Produit::where('ProdCategorie',$ProdCategorie)->get();
+            $produits=Produit::where('categorie',$categorie)->get();
             return view('Sweatshirts',compact('produits'));
         }
-        elseif ($ProdCategorie=="T-Shirts") 
+        elseif ($categorie=="T-Shirts") 
         {
-            $produits=Produit::where('ProdCategorie',$ProdCategorie)->get();
+            $produits=Produit::where('categorie',$categorie)->get();
             return view('T-Shirts',compact('produits'));
         }
-        elseif ($ProdCategorie=="Accessoires") 
+        elseif ($categorie=="Accessoires") 
         {
-            $produits=Produit::where('ProdCategorie',$ProdCategorie)->get();
+            $produits=Produit::where('categorie',$categorie)->get();
             return view('Accessoires',compact('produits'));
         }
     }
 
     
-    public function OrderBy($ProdCategorie,$trie)    
+    public function OrderBy($categorie,$trie)    
     {
-        if ($ProdCategorie=="Sweatshirts") 
+        if ($categorie=="Sweatshirts") 
         {
-            $produits=Produit::where('ProdCategorie',$ProdCategorie)
-                ->orderBy('ProdPrix',"$trie")
+            $produits=Produit::where('categorie',$categorie)
+                ->orderBy('prix',"$trie")
                 ->get();
             return view('Sweatshirts',compact('produits'));
         }
-        elseif ($ProdCategorie=="T-Shirts") 
+        elseif ($categorie=="T-Shirts") 
         {
-            $produits=Produit::where('ProdCategorie',$ProdCategorie)
-                ->orderBy('ProdPrix',"$trie")
+            $produits=Produit::where('categorie',$categorie)
+                ->orderBy('prix',"$trie")
                 ->get();
             return view('T-Shirts',compact('produits'));
         }
-        elseif ($ProdCategorie=="Accessoires") 
+        elseif ($categorie=="Accessoires") 
         {
-            $produits=Produit::where('ProdCategorie',$ProdCategorie)
-                ->orderBy('ProdPrix',"$trie")
+            $produits=Produit::where('categorie',$categorie)
+                ->orderBy('prix',"$trie")
                 ->get();
             return view('Accessoires',compact('produits'));
         }
         else
         {
-            $produits = Produit::orderBy('ProdPrix', "$trie")->get();
+            $produits = Produit::orderBy('prix', "$trie")->get();
             return view('Accueil',compact('produits'));
         }
         

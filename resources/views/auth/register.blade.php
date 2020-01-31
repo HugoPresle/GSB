@@ -49,9 +49,9 @@
 
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="name">{{ __('Nom :') }}</label>
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                    @error('name')
+                    <label for="nom">{{ __('Nom :') }}</label>
+                    <input id="nom" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ old('nom') }}" required autocomplete="nom" autofocus>
+                    @error('nom')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>

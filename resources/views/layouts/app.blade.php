@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="../">GSB Shop</a>
+                <a class="navbar-brand" href="../../">GSB Shop</a>
 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -35,6 +35,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                            <li >
+                                <a class="nav-link" href="/Panier">{{ __('Panier') }}</a>
+                            </li>
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li >
@@ -43,7 +46,7 @@
                         @else
                             <li>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->prenom }} <span class="caret"></span>
                                 </a>
                                 
                                     <li>
