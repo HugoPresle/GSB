@@ -10,7 +10,7 @@
 
                     @error('email')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
+                            <strong>Identifiant ou mot de passe incorrect</strong>
                         </span>
                     @enderror
             <br>        
@@ -18,7 +18,7 @@
 
                     @error('password')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
+                            <strong>Identifiant ou mot de passe incorrect</strong>
                         </span>
                     @enderror
                     <br>
@@ -30,7 +30,7 @@
 
                     @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
+                            {{ __('Mot de passe oublié ?') }}
                         </a>
                     @endif
         </form>        

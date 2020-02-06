@@ -1,5 +1,7 @@
+<!-- Affichage du header -->
 @extends('layouts.app')
 
+<!-- Début du body -->
 @section('content')
 
 <div class="container-fluid">
@@ -12,6 +14,7 @@
 			</h3>
       <br><br><br>
 
+<!-- Affichage des articles du panier -->
 			<div class="row">
 				<div class="col-md-9">
 					<table class="table table-striped table-hover">
@@ -37,6 +40,7 @@
 					</table>
 				</div>
 
+<!-- Affichage et code du prix du panier -->
 				<div class="col-md-3">
 
 					<div class="card bg-default">
@@ -69,18 +73,17 @@
 								</div>
 							</div>
 							
-						</div>
-
-							  
-							   
+						</div>	   
 					</div>
 
+<!-- Affichage et code du bouton pour valider son panier -->
           <br>
 					<button type="button" class="btn btn-md btn-dark">
 						Valider mon panier
 					</button>
           <br><br>
           
+<!-- Affichage d'informations générales sur la commande -->
 					<div class="card bg-default">
             			<div class="card-body">
 							<div class="row">
@@ -91,7 +94,6 @@
 									<h6>Paiement sécurisé<h6>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-md-2">
 									<h6><i class="fa fa-truck"></i></h6>
@@ -100,7 +102,6 @@
 									<h6>Livraison gratuite<h6>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="col-md-2">
 									<h6><i class="fa fa-hourglass-half"></i></h6>
@@ -111,15 +112,19 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div> 
-
-			<button type="button" class="btn btn-dark">
-				Continuer mes achats
-			</button>
+		
+<!-- Affichage du bouton de redirection vers la page d'accueil -->
+			<form action="" method='get'>
+				<button formaction="../../" class="btn btn-dark" >
+					Continuer mes achats
+				</button>
+			</form>
 
 		</div>
 	</div>
 </div>
+
 @endsection
+<!-- Fin du body -->
