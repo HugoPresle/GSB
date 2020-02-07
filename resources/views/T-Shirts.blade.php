@@ -33,22 +33,26 @@
 
 <!-- Affichage des articles dans des cards -->
 <div class="container-fluid">
-  <div class="row">
-  @foreach ($produits as $produit) 
+<div class="row">
+    @foreach ($produits as $produit)
     <div class="col-md-4">
-      <div class="card text-center" style="width: 18rem;">
-      <img src='{{$produit->image}}' style="height:250px;width:100%" />
-        <div class="card-body">
-            <h5 class="card-title"> {{$produit->libelle}} </h5>
-            <p class="card-text"> {{$produit->description}} </p>
-            <p class="card-text"> {{$produit->prix}}€ </p>
-            <a href="#" class="btn btn-dark">Ajouter au panier</a>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{{$produit->image}}"  style="height:300px;width:100%">
+          </div>
+          <div class="flip-card-back">
+                <h4 class="card-title"> {{$produit->libelle}} </h4>
+                <p class="card-text"> {{$produit->description}} </p>
+                <p class="card-text"> {{$produit->prix}}€ </p>
+                <a href="#" class="btn btn-dark">Ajouter au panier</a>
+          </div>
         </div>
+        <br>
       </div>
       <br>
     </div>
     @endforeach
-
   </div>
 
   <div class="row">

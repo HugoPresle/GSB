@@ -1,5 +1,7 @@
+<!-- Affichage du header -->
 @extends('layouts.app')
 
+<!-- Début du body -->
 @section('content')
 <div class="container">
     <br>
@@ -96,6 +98,8 @@
     </form>
 </div>
 @endsection
+<!-- Fin du body -->
+
 
 
                     
