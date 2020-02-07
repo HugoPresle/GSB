@@ -7,7 +7,7 @@
 <br>
 
 <!-- Bouton de filtre pour l'affichage des articles -->
-<form action="" method='get'>
+<form method='get'>
   <div class="container">
     <div class="row">
     <div class ="col-md-3">
@@ -45,7 +45,15 @@
                 <h4 class="card-title"> {{$produit->libelle}} </h4>
                 <p class="card-text"> {{$produit->description}} </p>
                 <p class="card-text"> {{$produit->prix}}€ </p>
-                <a href="#" class="btn btn-dark">Ajouter au panier</a>
+                <form action="../Panier/Ajouter" method='post'>
+                
+                {{ csrf_field() }}
+                  <input type="hidden" name='id' value='{{$produit->id}}'>
+                  <input type="hidden" name='libelle' value='{{$produit->libelle}}'>
+                  <input type="hidden" name='prix' value='{{$produit->prix}}'>
+                  <button class="btn btn-dark">Ajouter au panier </button>
+                </form>
+                
           </div>
         </div>
         <br>

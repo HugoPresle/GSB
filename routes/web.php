@@ -15,11 +15,9 @@ Auth::routes();
  Route::get('/','ProduitController@getAll');
  Route::get('/Article/{ProdCategorie}','ProduitController@find');
  Route::get('/Article/{ProdCategorie}/{trie}','ProduitController@OrderBy');
+ 
  Route::get('/Panier',function(){return view('Panier');});
+ Route::post('/Panier/Ajouter','PanierController@AjoutPanier');
 
 
 
-
-
-
-// Route::get('/home', 'HomeController@index')->name('home');
